@@ -1,0 +1,103 @@
+// more generous spacing for sections/articles
+section > *:not(:first-child) {
+  margin-top: 1.5em;
+}
+article > *:not(:first-child):has(.heading) {
+  margin-top: 1.5em;
+}
+
+/* CRC customizations */
+
+:root {
+  --bluegreen: hsl(192, 98%, 23%); //#015d74 rgb(1,93,16)
+}
+
+// From components/page-parts/_banner.scss
+.ptx-masthead {
+  .title-container {
+    font-family: var(--font-headings);
+    //    font-size: 2em;
+    font-size: 1.7em; /* *** CRC *** */
+    padding-left: 9.68px;
+    overflow: hidden;
+    flex: 1;
+  }
+}
+
+/* *** CRC *** */
+/* Overrides the overall sans font choice in theme-tacoma-crc */
+.ptx-content {
+  .heading {
+    font-family: "PT Serif, Times New Roman, Times, serif";
+  }
+}
+
+// Adapted from components/elements/_summary-links
+
+.ptx-content .summary-links {
+  display: block;
+  margin-top: 1em;
+
+  a {
+    color: var(--bluegreen); /* *** CRC *** */
+    background: var(--summary-link-background);
+    //font-size: 1.5em;
+    font-size: 1em; /* *** CRC *** */
+    line-height: 1.25em;
+    padding: 10px 20px;
+    padding-right: 60px;
+    //border-radius: 3px;
+    border-radius: 8px; /* *** CRC *** */
+    position: relative;
+    display: block;
+
+    .title {
+      font-style: normal;
+      font-weight: 600;
+    }
+  }
+  a.internal:hover,
+  a.internal:hover *,
+  a.internal:focus,
+  a.internal:focus * {
+    color: white; /* *** CRC *** */
+    background-color: var(--bluegreen); /* *** CRC *** */
+    font-weight: 600; /* *** CRC *** */
+
+    &::after {
+      // triangles
+      /*   right: 0.83333em;
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -0.4em;
+        width: 0;
+        height: 0;
+        border-top: 0.4em solid transparent;
+        border-bottom: 0.4em solid transparent; 
+        border-left: 0.4em solid var(--summary-link-text-color); */
+      border-left: 0.4em solid white; /* *** CRC *** */
+    }
+  }
+}
+
+/* *** CRC *** */
+// Footer button color
+// By examining the html source; rounded borders handled by theme-tacoma-crc
+.ptx-content-footer {
+  .previous-button,
+  .top-button,
+  .next-button {
+    color: var(--bluegreen);
+  }
+
+  // From components/helpers/_buttons-defaults.scss
+  .button {
+    &:hover:not(.disabled) {
+      // color: var(--button-hover-text-color);
+      //  background-color: var(--button-hover-background);
+      color: white;
+      background-color: var(--bluegreen);
+    }
+  }
+}
