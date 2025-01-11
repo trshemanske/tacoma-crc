@@ -8,17 +8,21 @@ $content-width: 600px !default;
 $content-side-padding: 48px !default;
 $content-side-padding-tight: 28px !default;
 $navbar-breakpoint: 800px !default;
-$footer-button-border-radius: 8px !default; /* *** CRC *** */
+
 $sidebar-breakpoint: $content-width + $sidebar-width + $content-side-padding * 2;
 $content-with-padding-width: $content-width + 2 * $content-side-padding;
+
+$footer-button-border-radius: 8px !default; /* *** CRC *** */
 
 @use 'components/page-parts/body' with (
   $max-width: $max-width,
   $content-width: $content-width,
   $content-side-padding: $content-side-padding,
   $centered-content: true,
+
   $footer-button-border-radius: $footer-button-border-radius, /* *** CRC *** */
 );
+
 
 @use 'components/page-parts/banner' with (
   $navbar-breakpoint: $navbar-breakpoint,
