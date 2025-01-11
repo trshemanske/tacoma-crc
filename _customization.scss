@@ -6,10 +6,10 @@ article > *:not(:first-child):has(.heading) {
   margin-top: 1.5em;
 }
 
-/* CRC customizations */
-
+/* *** crc customization *** */
 :root {
   --bluegreen: hsl(192, 98%, 23%); //#015d74 rgb(1,93,16)
+  --bluegreen-dark: hsl(192, 98%, 19%); //#014d60 rgb(1,77,96)
 }
 
 // From components/page-parts/_banner.scss
@@ -24,7 +24,6 @@ article > *:not(:first-child):has(.heading) {
   }
 }
 
-/* *** CRC *** */
 /* Overrides the overall sans font choice in theme-tacoma-crc */
 .ptx-content {
   .heading {
@@ -33,36 +32,44 @@ article > *:not(:first-child):has(.heading) {
 }
 
 // Adapted from components/elements/_summary-links
-
+/* Start of division toc links */
+// .ptx-content to override _links rules
 .ptx-content .summary-links {
+  font-family: var(--font-headings);
   display: block;
   margin-top: 1em;
 
   a {
-    color: var(--bluegreen); /* *** CRC *** */
+    /* Unchanged from _summary links
     background: var(--summary-link-background);
-    //font-size: 1.5em;
-    font-size: 1em; /* *** CRC *** */
+    font-size: 1.5em;
     line-height: 1.25em;
     padding: 10px 20px;
     padding-right: 60px;
-    //border-radius: 3px;
-    border-radius: 8px; /* *** CRC *** */
+    border-radius: 3px;
     position: relative;
     display: block;
+*/
+    color: var(--bluegreen);
+    font-size: 1em;
+    border-radius: 8px;
 
     .title {
-      font-style: normal;
+      //  font-style: normal;
       font-weight: 600;
     }
   }
+
+  /* Now adjust hovering colors */
+  //From components/elements/_links.scss
+
   a.internal:hover,
   a.internal:hover *,
   a.internal:focus,
   a.internal:focus * {
-    color: white; /* *** CRC *** */
-    background-color: var(--bluegreen); /* *** CRC *** */
-    font-weight: 600; /* *** CRC *** */
+    color: white;
+    background-color: var(--bluegreen);
+    font-weight: 600;
 
     &::after {
       // triangles
@@ -81,7 +88,6 @@ article > *:not(:first-child):has(.heading) {
   }
 }
 
-/* *** CRC *** */
 // Footer button color
 // By examining the html source; rounded borders handled by theme-tacoma-crc
 .ptx-content-footer {
