@@ -14,7 +14,7 @@ former since this was obviously a newish theme and the second since I wanted to 
 new variable to one of the `@use` components.
 
 At first I was hopeful that the rounded corners would be handled by the
-ubiquitous $border-radius statements as a pass through to other components, and
+ubiquitous `$border-radius` statements as a pass through to other components, and
 while that might be possible, I wasn't successful.
 
 ## theme-tacoma-crc.scss
@@ -32,8 +32,8 @@ In theme-tacoma-crc.scss I made the following changes:
   Change primary color which sets the color for title font, by-line font, links,
   etc. Set it red, and it is easy to see what gets changed!
 
-  //$primary-color: #015d74 !default;
-  $primary-color: #014d60 !default; // var(--bluegreen-dark)
+      //$primary-color: #015d74 !default;
+      $primary-color: #014d60 !default; // var(--bluegreen-dark)
 
   I had to change
   `@use 'parts-tacoma' as parts;` to `@use 'parts-tacoma-crc' as parts;`.
