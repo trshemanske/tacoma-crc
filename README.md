@@ -1,14 +1,14 @@
 # tacoma-crc
 
 A modification of the PreTeXt tacoma theme to include legacy-crc features.
-Based on PreTeXt 2.11.4
+Valid for PreTeXt 2.11.4 (and hopefully onward).
 
 ## Introduction
 
 Andrew Scholer accomplished an impressive rewrite of the CSS (generation) system for PreTeXt
 documents, providing a uniform extensible platform on which new themes can be
 built. Andrew, together with Oscar Levin, have created a number of new
-themes to address various presentation features desired by users of PreTeXt.
+themes to provide various presentation features desired by users of PreTeXt.
 
 Some of these themes are new and others are in part revisions of legacy
 themes. Among the legacy themes is the _crc_ theme (centered-rounded-corners) of
@@ -20,6 +20,10 @@ To that end, I started with the Scholer's tacoma theme ("a minimal distraction
 reading environment") which has a nice, light feel to it, and introduced changes
 affecting fonts, base colors, and of course rounded corners which creates a
 blend of the tacoma and crc features.
+
+These changes simply provide a superficial new skin to the tacoma theme
+affecting only CSS, so there should be no functional differences between tacoma
+and tacoma-crc.
 
 ## Disclaimer
 
@@ -36,8 +40,7 @@ So my approach to constructing this modified theme was lots of viewing source of
 generated html, noting all relevant tags for CSS classes and grepping my way
 through all of Andrew's core documents to find the right elements to tweak.
 
-This is far from a polished standalone theme, and I really have no interest in
-pushing beyond the cosmetic changes I have made. Still I hope it may encourage
+This is far from a polished standalone theme. Still I hope it may encourage
 others to play.
 
 ## Road Map Coming
@@ -45,4 +48,3 @@ others to play.
 While the files have reasonable inline documentation, I will try to include a
 roadmap which indicates how various pieces were altered to achieve the desired
 result.
-
