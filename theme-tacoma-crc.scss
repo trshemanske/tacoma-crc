@@ -19,7 +19,13 @@ $primary-color: #014d60  !default; // var(--bluegreen-dark)  /* *** crc *** */
 // components
 @use 'parts-tacoma-crc' as parts;
 
-@use 'chunks-minimal' with ($border-radius: 0); 
+// If you need modifications to 'chunks-minimal'
+// Modify your local copy and use the following:
+//@use 'chunks-minimal' with ($border-radius: 0); 
+
+// If you don't need to modify the tacoma copy
+@use 'targets/html/tacoma/chunks-minimal' with ($border-radius: 0);
+// This path is relative to ~/.ptx/<version>/core/css/
 
 @use 'components/pretext' with (
   $navbar-breakpoint: parts.$navbar-breakpoint,

@@ -106,10 +106,12 @@
     <!-- alternative styles exist yet for those.               -->
     
     <!--css theme="tacoma"/-->
-    <css theme="custom"
-    entry-point="ptx-link/2.11.4/core/css/targets/html/tacoma-crc/theme-tacoma-crc.scss" />
+
+    <!-- entry-point is relative to the source directory -->
+    <!-- tacoma-crc is a symbolic link to my theme development directory -->
+    <css theme="custom" entry-point="tacoma-crc/theme-tacoma-crc.scss" />
+   
     <!--css style="crc" colors="bluegreen_grey"/-->
-    
     <!-- Search can be default or none, or you can use a Google-cx number to use google's search feature (but then variant should be set to none to avoid conflict) -->
     <search variant="default"/>
     <!-- Embedded calculators.  For math, this could be geogebra-classic, geogebra-graphing, geogebra-geometry, and geogebra-3d.  For ActiveCode, you can specify a language (python, javascript, etc).  -->
