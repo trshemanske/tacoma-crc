@@ -1,7 +1,14 @@
-# tacoma-crc
+# tacoma-crc (working name changed to boulder as development continues)
 
 A modification of the PreTeXt tacoma theme to include legacy-crc features.
-Valid for PreTeXt 2.11.4 (and hopefully onward).
+Valid for PreTeXt 2.12.0 (and hopefully onward).
+
+boulder is becoming a mix of other themes that exist, starting with tacoma, but
+borrowing elements from others.  Centered-Rounded-Corners (crc) no longer really
+makes sense since tacoma is centered for larger screen sizes.  I considered
+minimally-rounded-corners, but the theme is not entirely spartan. It will
+probably never be sufficiently polished to be a standard theme, but the idea is
+to play and to give examples of how to modify exisiting themes.
 
 ## Introduction
 
