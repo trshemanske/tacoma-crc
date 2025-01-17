@@ -6,21 +6,55 @@ article > *:not(:first-child):has(.heading) {
   margin-top: 1.5em;
 }
 
-/* *** crc customization *** */
-:root {
-  --bluegreen: hsl(192, 98%, 23%); //#015d74 rgb(1,93,16)
-  --bluegreen-dark: hsl(192, 98%, 19%); //#014d60 rgb(1,77,96)
+para {
+  // L-border
+  .theorem-like,
+  .definition-like,
+  .example-like,
+  .project-like,
+  .remark-like,
+  .openproblem-like,
+  .computation-like {
+    // @include L-mixin.border;
+    border-left-width: 8px;
+
+    .knowl__content {
+      margin: 0.75em 0; //at least this much space above/below
+      border: 2px solid var(--bluegreen);
+      border-radius: 8px;
+      padding: 12px;
+      padding-top: 0;
+      background-color: var(--knowl-background);
+    }
+  }
 }
+
+.solution-like,
+.exercise-like {
+  .knowl__content {
+    padding: 12px;
+  }
+}
+
+/*
+.theorem-like:not(.knowl__content, .born-hidden-knowl), 
+.definition-like:not(.knowl__content, .born-hidden-knowl), 
+.example-like:not(.knowl__content, .born-hidden-knowl), 
+.project-like:not(.knowl__content, .born-hidden-knowl), 
+.remark-like:not(.knowl__content, .born-hidden-knowl), 
+.openproblem-like:not(.knowl__content, .born-hidden-knowl), 
+.computation-like:not(.knowl__content, .born-hidden-knowl) {
+      padding-left: 10px;
+      border-left: 
+  8px solid var(￼--block-border-color);
+  }
+  */
 
 // From components/page-parts/_banner.scss
 .ptx-masthead {
   .title-container {
-    font-family: var(--font-headings);
     //    font-size: 2em;
     font-size: 1.7em; /* *** CRC *** */
-    padding-left: 9.68px;
-    overflow: hidden;
-    flex: 1;
   }
 }
 
@@ -35,23 +69,9 @@ article > *:not(:first-child):has(.heading) {
 /* Start of division toc links */
 // .ptx-content to override _links rules
 .ptx-content .summary-links {
-  font-family: var(--font-headings);
-  display: block;
-  margin-top: 1em;
-
   a {
-    /* Unchanged from _summary links
-    background: var(--summary-link-background);
-    font-size: 1.5em;
-    line-height: 1.25em;
-    padding: 10px 20px;
-    padding-right: 60px;
-    border-radius: 3px;
-    position: relative;
-    display: block;
-*/
     color: var(--bluegreen);
-    font-size: 1em;
+    font-size: 1.1em;
     border-radius: 8px;
 
     .title {
@@ -73,17 +93,7 @@ article > *:not(:first-child):has(.heading) {
 
     &::after {
       // triangles
-      /*   right: 0.83333em;
-        content: "";
-        position: absolute;
-        top: 50%;
-        margin-top: -0.4em;
-        width: 0;
-        height: 0;
-        border-top: 0.4em solid transparent;
-        border-bottom: 0.4em solid transparent; 
-        border-left: 0.4em solid var(--summary-link-text-color); */
-      border-left: 0.4em solid white; /* *** CRC *** */
+      border-left: 0.4em solid white;
     }
   }
 }
